@@ -1,14 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export let Overview = {};
 
 Overview.Container = styled.div`
   display: flex;
-  padding: 12px 32px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  flex: 1 0 0;
+  gap: 24px;
 `;
 Overview.Title = styled.div`
   display: flex;
@@ -24,14 +22,20 @@ Overview.TitleName = styled.p`
   font-weight: 500;
   line-height: 28px;
 `;
-Overview.Month = styled.button`
-  width: 137px;
-  height: 36px;
-  border-radius: 6px;
-  border: 1px solid ${({ theme }) => theme.black85};
+Overview.SortingDropdown = styled.div`
+  padding: 6px 14px;
   display: flex;
+  gap: 7px;
   align-items: center;
-  justify-content: space-evenly;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  border-radius: 4px;
+  border: 1px solid ${({ theme }) => theme.black85};
+  background: ${({ theme }) => theme.white};
 `;
 Overview.Cards = styled.div`
   display: flex;

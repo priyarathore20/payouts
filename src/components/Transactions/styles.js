@@ -7,35 +7,21 @@ TransactionsStyles.Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  padding: 12px 32px;
-
-  input {
-    display: flex;
-    padding: 10px 16px;
-    align-items: center;
-    gap: 8px;
-    border-radius: 4px;
-    border: 1px solid ${({ theme }) => theme.black85};
-    background: ${({ theme }) => theme.white};
-    width: 248px;
-    margin-left: 12px;
-  }
-
-  .options-button {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 12px;
-    padding: 12px;
-  }
+  margin-top: 32px;
 `;
+
 TransactionsStyles.Title = styled.p`
   color: ${({ theme }) => theme.black12};
-  font-family: Inter, sans-serif;
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
   line-height: 28px;
+`;
+
+TransactionsStyles.Content = styled.div`
+  width: 100%;
+  padding: 12px;
+  background-color: ${({ theme }) => theme.white};
+  border-radius: 8px;
 `;
 
 TransactionsStyles.Options = styled.div`
@@ -43,7 +29,13 @@ TransactionsStyles.Options = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.white};
+
+  .options-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+  }
 `;
 
 TransactionsStyles.Sort = styled.button`
@@ -55,6 +47,11 @@ TransactionsStyles.Sort = styled.button`
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.black85};
   background: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black30};
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 `;
 
 TransactionsStyles.Download = styled.button`
@@ -63,31 +60,50 @@ TransactionsStyles.Download = styled.button`
   height: 36px;
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.black85};
+  cursor: pointer;
 `;
 
 TransactionsStyles.Table = styled.table`
+  margin-top: 12px;
   border-collapse: collapse;
   width: 100%;
   background-color: ${({ theme }) => theme.white};
 
   th,
   td {
-    padding: 14px 12px;
     text-align: left;
   }
 
   th {
+    padding: 10px 12px;
+    border-radius: 4px;
     width: calc(100% / 4);
     color: ${({ theme }) => theme.black30};
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 20px; 
+    line-height: 20px;
     background-color: ${({ theme }) => theme.black95};
+    vertical-align: middle;
+    /* display: flex; */
+    /* align-items: center; */
+
+    /* padding: 10px; */
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    & .arrow {
+      font-size: 8px;
+    }
   }
 
   td {
+    padding: 14px 12px;
     color: ${({ theme }) => theme.black12};
     font-family: Inter, sans-serif;
     font-size: 14px;
@@ -102,14 +118,21 @@ TransactionsStyles.Table = styled.table`
   }
 
   tr {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid ${({ theme }) => theme.black90};
   }
 
-  .text-right{
+  .text-right {
     text-align: right;
+    justify-content: flex-end;
   }
-  .text-center{
+  .text-center {
     text-align: center;
+    justify-content: center;
   }
 `;
-TransactionsStyles.TableRow = styled.tr``;
+
+TransactionsStyles.PaginationContainer = styled.div`
+  width: 100%;
+  justify-content: center;
+  margin-top: 24px;
+`;
