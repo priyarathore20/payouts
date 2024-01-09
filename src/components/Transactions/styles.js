@@ -66,10 +66,50 @@ TransactionsStyles.Download = styled.button`
 `;
 
 TransactionsStyles.Table = styled.table`
-display: flex;
-flex-direction: column;
-width: 1128px;
-padding: 10px 12px;
-gap: 40px;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: ${({ theme }) => theme.white};
+
+  th,
+  td {
+    padding: 14px 12px;
+    text-align: left;
+  }
+
+  th {
+    width: calc(100% / 4);
+    color: ${({ theme }) => theme.black30};
+    font-family: Inter,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; 
+    background-color: ${({ theme }) => theme.black95};
+  }
+
+  td {
+    color: ${({ theme }) => theme.black12};
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  td > a {
+    color: ${({ theme }) => theme.primaryBlue};
+    text-decoration: none;
+  }
+
+  tr {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .text-right{
+    text-align: right;
+  }
+  .text-center{
+    text-align: center;
+  }
 `;
 TransactionsStyles.TableRow = styled.tr``;

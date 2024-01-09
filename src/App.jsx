@@ -1,11 +1,9 @@
-import MainSection from "./page/MainSection";
-import Sidebar from "./components/Sidebar";
+import Dashboard from "./page/Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar />
-      <MainSection />
+    <div>
+      <Dashboard />
     </div>
   );
 }
