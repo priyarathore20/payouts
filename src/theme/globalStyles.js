@@ -23,6 +23,10 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
       margin: 0;
+
+      .App{
+        display: flex;
+      }
     }
 
     *,
@@ -33,4 +37,5 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: Inter, sans-serif;
     }
+    
 `;
